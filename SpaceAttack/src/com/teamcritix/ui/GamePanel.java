@@ -47,7 +47,6 @@ public class GamePanel extends JPanel {
     }
 
     private void initializeGame() {
-        this.addMouseListener(new MouseInput());
         for (int i = 0 ; i < Constants.ENEMY_SHIPS_ROW ; i++){
             for(int j = 0 ; j < Constants.ENEMY_SHIPS_COLUMN ; j++){
                 EnemyShip enemyShip = new EnemyShip(Constants.ENEMY_SHIP_INIT_X + 50 * j,
@@ -58,6 +57,7 @@ public class GamePanel extends JPanel {
     }
 
     private void initializeVariables() {
+        this.addMouseListener(new MouseInput());
         this.menu = new Menu();
         this.gameOverMenu = new GameOverMenu();
         this.soundFactory = new SoundFactory();
